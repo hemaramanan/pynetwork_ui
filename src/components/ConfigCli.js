@@ -101,10 +101,9 @@ class ConfigCli extends Component {
 
   render() {
     const { devices } = this.state;
-    const { SucessMessages } = this.state;
     return (
       <div>
-        <h2>WEB Config Executor</h2>
+        <h2>Config CLI</h2>
         <Grid container>
           <Grid item ms={4} style={this.tableStyle}>
             <form noValidate autoComplete="off">

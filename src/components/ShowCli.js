@@ -4,7 +4,6 @@ import MaterialTable from "material-table";
 import { Button } from "@material-ui/core";
 import { TextField } from "@material-ui/core";
 import axios from "axios";
-import Alert from "@material-ui/lab/Alert";
 
 class ShowCli extends Component {
   constructor(props) {
@@ -103,10 +102,9 @@ class ShowCli extends Component {
 
   render() {
     const { devices } = this.state;
-    const { SucessMessages } = this.state;
     return (
       <div>
-        <h2>WEB CLI</h2>
+        <h2>Show CLI</h2>
         <Grid container>
           <Grid item ms={4} style={this.tableStyle}>
             <form noValidate autoComplete="off">
@@ -128,7 +126,7 @@ class ShowCli extends Component {
                 variant="contained"
                 style={this.field}
               >
-                Submit
+                Execute Show Commands
               </Button>
             </form>
             <link
@@ -148,11 +146,6 @@ class ShowCli extends Component {
             />
           </Grid>
           <Grid item ms={8}>
-            {/*                  { this.setIserror && 
-                    <Alert severity="error">
-                            {this.ErrorMessages.map((msg, i) => {
-                            return <div key={i}>{msg}</div>})}
-                    </Alert>} */}
             {this.setIssucess && (
               <table border="1">
                 <tbody>

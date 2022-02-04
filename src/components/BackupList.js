@@ -11,9 +11,7 @@ class BackupList extends Component {
   }
   fetchBackups() {
     const arr = [];
-    fetch("http://192.168.100.100:5000/inventory/backup/cisco/");
-    console
-      .log(process.env.REACT_APP_PYNETWORK_URL + "/inventory/backup/cisco/")
+    fetch(process.env.REACT_APP_PYNETWORK_URL + "/inventory/backup/cisco/")
       .then((response) => response.json())
       .then((data) => {
         console.log("Success:", data);

@@ -69,8 +69,6 @@ class ExportBackup extends Component {
   render() {
     const { backups } = this.state;
     // console.log("Rendering", backups);
-
-    const column = "Configuration List";
     // console.log(backups.response)
     return (
       <div className="container" style={{ maxWidth: "100%" }}>
@@ -84,7 +82,7 @@ class ExportBackup extends Component {
           justify="space-between"
           alignItems="center"
         >
-          <h2>Delete Backup Configurations</h2>
+          <h2>Export Backup</h2>
           <Button
             variant="contained"
             onClick={() => {
@@ -95,9 +93,9 @@ class ExportBackup extends Component {
           </Button>
         </Grid>
         <MaterialTable
-          columns={[{ title: "Backups Names", field: "name" }]}
+          columns={[{ title: "Backup file name", field: "name" }]}
           data={backups}
-          title="Backup Files"
+          title=""
           onSelectionChange={(rows) => this.setState({ selectedRows: rows })}
           options={{ selection: true, exportAllData: true }}
           actions={[

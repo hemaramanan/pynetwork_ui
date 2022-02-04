@@ -98,7 +98,7 @@ class CreateBackups extends Component {
           justify="space-between"
           alignItems="center"
         >
-          <h2>Create config backups</h2>
+          <h2>Create Backup</h2>
           <Button
             variant="contained"
             onClick={() => {
@@ -131,7 +131,7 @@ class CreateBackups extends Component {
         <Grid>
           <MaterialTable
             className="tableStyle"
-            title="Device list"
+            title=""
             columns={[{ title: "Hostname", field: "host", defaultSort: "asc" }]}
             data={devices.devices}
             onSelectionChange={(rows) => this.setState({ selectedRows: rows })}
@@ -142,7 +142,7 @@ class CreateBackups extends Component {
             actions={[
               {
                 icon: () => <BuildIcon />,
-                tooltip: "Delete all selected rows",
+                tooltip: "Backup the Running config",
                 onClick: () =>
                   new Promise((resolve) => {
                     this.createBackup(resolve);

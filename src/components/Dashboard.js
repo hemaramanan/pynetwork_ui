@@ -100,7 +100,7 @@ export default function PersistentDrawerLeft() {
 
   const selectedPage = (index) => {
     console.log(index);
-    if (index === "Inventory list") {
+    if (index === "Inventory") {
       setDisplayPage(<DeviceList />);
     }
     if (index === "Inventory Management") {
@@ -112,10 +112,10 @@ export default function PersistentDrawerLeft() {
     if (index === "Config CLI") {
       setDisplayPage(<ConfigCli />);
     }
-    if (index === "Config Backup") {
+    if (index === "Create Backup") {
       setDisplayPage(<CreateBackups />);
     }
-    if (index === "Config Maintainance") {
+    if (index === "Delete Backup") {
       setDisplayPage(<DeleteBackups />);
     }
     if (index === "Export Backup") {
@@ -187,7 +187,7 @@ export default function PersistentDrawerLeft() {
             </ListItem>
           ))}
           <List>
-            {["Inventory list", "Inventory Management"].map((text, index) => (
+            {["Inventory", "Inventory Management"].map((text, index) => (
               <ListItem
                 button
                 key={text}
@@ -234,13 +234,13 @@ export default function PersistentDrawerLeft() {
           </List>
           <Divider />
           <List>
-            {["Backup config"].map((text) => (
+            {["Configuration Backup"].map((text) => (
               <ListItem multiline key={text}>
                 <ListItemText primary={text} />
               </ListItem>
             ))}
             <List>
-              {["Config Backup", "Config Maintainance", "Export Backup"].map(
+              {["Create Backup", "Delete Backup", "Export Backup"].map(
                 (text, index) => (
                   <ListItem
                     button
@@ -250,11 +250,11 @@ export default function PersistentDrawerLeft() {
                   >
                     <ListItemIcon>
                       {index === 0 ? (
-                        <BackupIcon />
-                      ) : index === 1 ? (
                         <AddCircleOutlineIcon />
+                      ) : index === 1 ? (
+                        <DeleteForeverIcon />
                       ) : index === 2 ? (
-                        <EditIcon />
+                        <BackupIcon />
                       ) : (
                         <DeleteForeverIcon />
                       )}

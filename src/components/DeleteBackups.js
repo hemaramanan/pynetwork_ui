@@ -59,9 +59,7 @@ class DeleteBackups extends Component {
 
   render() {
     const { backups } = this.state;
-    console.log("Rendering", backups);
-
-    const column = "Configuration List";
+    // console.log("Rendering", backups);
     // console.log(backups.response)
     return (
       <div className="container" style={{ maxWidth: "100%" }}>
@@ -75,7 +73,7 @@ class DeleteBackups extends Component {
           justify="space-between"
           alignItems="center"
         >
-          <h2>Delete Backup Configurations</h2>
+          <h2>Delete Backup</h2>
           <Button
             variant="contained"
             onClick={() => {
@@ -86,9 +84,9 @@ class DeleteBackups extends Component {
           </Button>
         </Grid>
         <MaterialTable
-          columns={[{ title: "Backups Names", field: "name" }]}
+          columns={[{ title: "Backup file name", field: "name" }]}
           data={backups}
-          title="Backup Files"
+          title=""
           editable={{
             onRowDelete: (backupFileInfo) =>
               new Promise((resolve) => {

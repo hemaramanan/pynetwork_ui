@@ -40,12 +40,12 @@ class DeviceList extends Component {
           <h2>Inventory</h2>
         </Grid>
         <MaterialTable
-          title="Device List"
+          title=""
           columns={[
             { title: "Hostname", field: "host", defaultSort: "asc" },
             { title: "Username", field: "username" },
             { title: "SSH Port", field: "port" },
-            { title: "Password", field: "password" },
+            { title: "Password", field: "password", hidden: true },
           ]}
           data={devices.devices}
           options={{ exportButton: true, exportAllData: true }}

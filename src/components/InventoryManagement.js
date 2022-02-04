@@ -179,7 +179,7 @@ class InventoryManagement extends Component {
           justify="space-between"
           alignItems="center"
         >
-          <h2>Devices Table From File</h2>
+          <h2>Inventory Management</h2>
           <Button
             variant="contained"
             onClick={() => {
@@ -190,7 +190,7 @@ class InventoryManagement extends Component {
           </Button>
         </Grid>
         <MaterialTable
-          title="Device List"
+          title=""
           columns={[
             { title: "Hostname", field: "host", defaultSort: "asc" },
             { title: "Username", field: "username" },
