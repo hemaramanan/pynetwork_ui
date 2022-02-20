@@ -23,6 +23,10 @@ import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
 import BackupIcon from "@material-ui/icons/Backup";
 import BuildIcon from "@material-ui/icons/Build";
 import CodeIcon from "@material-ui/icons/Code";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import YouTubeIcon from "@material-ui/icons/YouTube";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LanguageIcon from '@material-ui/icons/Language';
 
 import DeviceList from "./DeviceList";
 import InventoryManagement from "./InventoryManagement";
@@ -89,6 +93,10 @@ const useStyles = makeStyles((theme) => ({
     }),
     marginLeft: 0,
   },
+  toolbarButtons: {
+    marginLeft: "auto",
+    display: "block",
+  },
 }));
 
 export default function PersistentDrawerLeft() {
@@ -147,7 +155,7 @@ export default function PersistentDrawerLeft() {
         })}
       >
         <Toolbar>
-          <IconButton
+        <IconButton
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
@@ -156,10 +164,47 @@ export default function PersistentDrawerLeft() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            PYnetwork
-          </Typography>
-        </Toolbar>
+          <Typography variant="h6" noWrap align="center">Pynetwork</Typography>
+          
+          
+            <div className={classes.toolbarButtons}>
+            <IconButton
+            color="inherit"
+            href={"https://pynetwork.net/"}
+            target="_blank"
+          >
+            <LanguageIcon />
+          </IconButton>        
+          <IconButton
+            color="inherit"
+            href={"https://github.com/hemaramanan/"}
+            target="_blank"
+          >
+            <GitHubIcon />
+          </IconButton>
+          
+          <IconButton
+            color="inherit"
+            href={"https://www.linkedin.com/in/hema/"}
+            target="_blank"
+          >
+            <LinkedInIcon />
+          </IconButton>  
+          <IconButton
+            color="inherit"
+            href={
+              "https://www.youtube.com/channel/UCNUC58PnjCGUWnpXXl3o2MA/featured"
+            }
+            target="_blank"
+           
+          >
+            <YouTubeIcon/>
+          </IconButton>
+              
+            </div>
+          </Toolbar>
+          
+    
       </AppBar>
       <Drawer
         className={classes.drawer}
