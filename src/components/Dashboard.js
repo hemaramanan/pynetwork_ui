@@ -24,9 +24,9 @@ import BackupIcon from "@material-ui/icons/Backup";
 import BuildIcon from "@material-ui/icons/Build";
 import CodeIcon from "@material-ui/icons/Code";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import YouTubeIcon from "@material-ui/icons/YouTube";
+import HomeIcon from '@material-ui/icons/Home';
 import GitHubIcon from "@material-ui/icons/GitHub";
-import LanguageIcon from '@material-ui/icons/Language';
+
 
 import DeviceList from "./DeviceList";
 import InventoryManagement from "./InventoryManagement";
@@ -173,7 +173,7 @@ export default function PersistentDrawerLeft() {
             href={"https://pynetwork.net/"}
             target="_blank"
           >
-            <LanguageIcon />
+            <HomeIcon />
           </IconButton>        
           <IconButton
             color="inherit"
@@ -190,16 +190,6 @@ export default function PersistentDrawerLeft() {
           >
             <LinkedInIcon />
           </IconButton>  
-          <IconButton
-            color="inherit"
-            href={
-              "https://www.youtube.com/channel/UCNUC58PnjCGUWnpXXl3o2MA/featured"
-            }
-            target="_blank"
-           
-          >
-            <YouTubeIcon/>
-          </IconButton>
               
             </div>
           </Toolbar>
